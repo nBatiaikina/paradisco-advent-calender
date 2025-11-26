@@ -14,6 +14,8 @@ const firebaseConfig = {
   storageBucket: "advent-calender-43953.firebasestorage.app",
   messagingSenderId: "301331839216",
   appId: "1:301331839216:web:ea8502d600b93c62c42a35",
+  databaseURL:
+    "https://advent-calender-43953-default-rtdb.europe-west1.firebasedatabase.app",
 };
 
 // Initialize Firebase
