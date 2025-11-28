@@ -43,6 +43,7 @@ body {
   align-items: center;
   justify-content: start;
 }
+
 .App {
   text-align: center;
 }
@@ -96,7 +97,7 @@ p {
 .calendar {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(6, minmax(80px, 1fr));
+  grid-template-columns: repeat(8, minmax(80px, 1fr));
   grid-auto-rows: minmax(80px, 120px);
   gap: 0px;
   width: 60%;
@@ -116,7 +117,6 @@ p {
   }
 }
 .day {
-  background: transparent;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -134,7 +134,7 @@ p {
   outline: none;
   z-index: 1;
   border: 1px dashed #fff;
-  opacity: 0.2;
+  opacity: 0.3;
   position: relative;
 }
 .day.selected,
@@ -187,7 +187,24 @@ p {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
 }
+/*
+.side-by-side:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../public/images/background.jpg");
+  background-position: -340px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+  background-size: 800px;
+  opacity: 0.2;
+}*/
+
 .calendar-component {
   flex: 1 1 0;
   min-width: 0;
