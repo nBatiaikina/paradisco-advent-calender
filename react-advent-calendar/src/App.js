@@ -9,7 +9,6 @@ function App() {
   const [entries, setEntries] = useState([]);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const today = new Date();
   const initialDay = Math.max(1, Math.min(24, 12)); // or today.getDate() for real date
   const [selectedDay, setSelectedDay] = useState(initialDay);
 

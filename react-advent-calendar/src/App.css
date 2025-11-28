@@ -25,8 +25,6 @@ body {
   min-height: 100vh;
   /* background: linear-gradient(120deg, #2d96ff 0%, #df4559 50%, #f0c668 100%);*/
   background: #101937;
-  background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 .header {
@@ -45,6 +43,7 @@ body {
   align-items: center;
   justify-content: start;
 }
+
 .App {
   text-align: center;
 }
@@ -98,7 +97,7 @@ p {
 .calendar {
   margin-top: 1em;
   display: grid;
-  grid-template-columns: repeat(6, minmax(80px, 1fr));
+  grid-template-columns: repeat(8, minmax(80px, 1fr));
   grid-auto-rows: minmax(80px, 120px);
   gap: 0px;
   width: 60%;
@@ -109,10 +108,15 @@ p {
   padding-right: 18px;
   max-width: 100vw;
   overflow-x: hidden;
-  position: relative;
+  position: relat;
+}
+
+@media only screen and (max-width: 1100px) {
+  .calendar {
+    grid-template-columns: repeat(5, minmax(80px, 1fr));
+  }
 }
 .day {
-  background: transparent;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -130,7 +134,7 @@ p {
   outline: none;
   z-index: 1;
   border: 1px dashed #fff;
-  opacity: 0.2;
+  opacity: 0.5;
   position: relative;
 }
 .day.selected,
@@ -152,9 +156,14 @@ p {
   opacity: 1;
   transition: width 0.2s, height 0.2s;
 }
+
 .day:hover {
-  background: linear-gradient(135deg, #31488c 70%, #22336c 100%);
   color: #fff;
+  opacity: 0.6;
+}
+
+.day.selected:hover {
+  opacity: 1;
 }
 .day--large {
   font-size: 60px;
@@ -183,7 +192,9 @@ p {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
 }
+
 .calendar-component {
   flex: 1 1 0;
   min-width: 0;
@@ -237,7 +248,6 @@ p {
   display: flex;
   flex-direction: column;
   margin-bottom: 2em;
-  /* Remove the solid border */
   border: none;
   z-index: 1;
   overflow: visible;
@@ -278,6 +288,11 @@ p {
   gap: 1em;
 }
 
+.team-input-results input::placeholder {
+  color: #bbb; /* or any grey you prefer */
+  font-weight: 400;
+}
+
 .team-input-results input {
   margin-right: 0; /* Remove horizontal spacing */
   margin-bottom: 0; /* We'll use gap instead */
@@ -287,11 +302,22 @@ p {
   border: none;
   font-size: 16px;
   border: 2px solid transparent;
+  font-weight: 700;
 }
 
 .team-input-results input:focus {
-  outline: none;
-  border-color: #1576ff;
+  outline: 3px solid #ff823a;
+}
+
+.team-input-results input[type="number"]::-webkit-outer-spin-button,
+.team-input-results input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows/spinners from number inputs (Firefox) */
+.team-input-results input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .team-input-results button {
@@ -353,6 +379,13 @@ p {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.results-total-row td {
+  background: #ffb522;
+  color: #222b3a;
+  font-weight: bold;
+  border-color: #e5a21e;
+}
+
 .progress-block {
   padding: 18px 20px;
 }
@@ -376,20 +409,64 @@ p {
   background: linear-gradient(90deg, #4bc8de 0%, #0088ff 100%);
   transition: width 0.4s cubic-bezier(0.4, 1.4, 0.6, 1);
 }
-@media (max-width: 900px) {
+
+.day--disabled {
+  opacity: 0.25;
+}
+
+.input-and-bar-block {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+}
+
+.congrats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(225, 225, 225, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-align: center;
+  pointer-events: all;
+}
+.congrats-img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+.congrats-text {
+  font-size: 50px;
+  color: #007dc3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-family: "SFCollegiateSolid", Arial, sans-serif;
+}
+
+@media (max-width: 876px) {
   .side-by-side {
     flex-direction: column;
     height: auto;
-    gap: 1.5em;
+    gap: 0;
   }
-  .calendar-component {
-    max-width: 100vw;
+
+  .calendar,
+  .team-input-results {
     width: 100vw;
-    height: auto;
-    min-height: 0;
+    box-sizing: border-box;
   }
-  .calendar-component {
-    border-right: none;
-    border-bottom: 2px solid #df4559;
+
+  .calendar {
+    grid-template-columns: repeat(8, minmax(80px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .calendar {
+    grid-template-columns: repeat(6, minmax(80px, 1fr));
   }
 }

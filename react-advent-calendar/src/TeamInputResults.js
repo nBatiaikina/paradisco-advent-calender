@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function TeamInputResults({
   name,
   setName,
@@ -7,42 +5,56 @@ export default function TeamInputResults({
   setNumber,
   onSubmit,
   entries,
-  target = 1, // daily target amount
+  target = 1,
 }) {
+  const superKloss = `${process.env.PUBLIC_URL}/images/Superkloss.svg`;
   const total = entries.reduce((sum, entry) => sum + Number(entry.number), 0);
   const progress = Math.min(total / target, 1);
+  const fulfilled = total >= target;
 
   return (
     <div className="team-input-results">
-      <div className="progress-block">
-        <div className="progress-count">
-          {total} / {target}
+      <div className="input-and-bar-block">
+        <div className="progress-block">
+          <div className="progress-count">
+            {total} / {target}
+          </div>
+          <div className="progress-bar-outer">
+            <div
+              className="progress-bar-inner"
+              style={{ width: `${Math.round(progress * 100)}%` }}
+            />
+          </div>
         </div>
-        <div className="progress-bar-outer">
-          <div
-            className="progress-bar-inner"
-            style={{ width: `${Math.round(progress * 100)}%` }}
-          />
+        <div className="input-block">
+          <form onSubmit={onSubmit}>
+            <input
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <input
+              type="number"
+              placeholder="Number"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+              required
+            />
+            <button type="submit">Submit</button>
+          </form>
         </div>
-      </div>
-      <div className="input-block">
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <input
-            type="number"
-            placeholder="Number"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
-            required
-          />
-          <button type="submit">Submit</button>
-        </form>
+        {fulfilled && (
+          <div className="congrats-overlay">
+            <img
+              src={superKloss}
+              alt="Congratulations"
+              className="congrats-img"
+            />
+            <div className="congrats-text">Doooooone!</div>
+          </div>
+        )}
       </div>
       <div className="results-block">
         <table className="results-table">
