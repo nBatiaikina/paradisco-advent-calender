@@ -288,6 +288,11 @@ p {
   gap: 1em;
 }
 
+.team-input-results input::placeholder {
+  color: #bbb; /* or any grey you prefer */
+  font-weight: 400;
+}
+
 .team-input-results input {
   margin-right: 0; /* Remove horizontal spacing */
   margin-bottom: 0; /* We'll use gap instead */
@@ -297,11 +302,22 @@ p {
   border: none;
   font-size: 16px;
   border: 2px solid transparent;
+  font-weight: 700;
 }
 
 .team-input-results input:focus {
-  outline: none;
-  border-color: #1576ff;
+  outline: 3px solid #ff823a;
+}
+
+.team-input-results input[type="number"]::-webkit-outer-spin-button,
+.team-input-results input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows/spinners from number inputs (Firefox) */
+.team-input-results input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .team-input-results button {
@@ -363,6 +379,13 @@ p {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.results-total-row td {
+  background: #ffb522;
+  color: #222b3a;
+  font-weight: bold;
+  border-color: #e5a21e;
+}
+
 .progress-block {
   padding: 18px 20px;
 }
@@ -389,6 +412,39 @@ p {
 
 .day--disabled {
   opacity: 0.25;
+}
+
+.input-and-bar-block {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+}
+
+.congrats-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(225, 225, 225, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-align: center;
+  pointer-events: all;
+}
+.congrats-img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+.congrats-text {
+  font-size: 50px;
+  color: #007dc3;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-family: "SFCollegiateSolid", Arial, sans-serif;
 }
 
 @media (max-width: 876px) {
