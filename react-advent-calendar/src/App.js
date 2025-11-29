@@ -92,8 +92,8 @@ function App() {
           <div className="calendar-description">
             <img
               src={superKloss}
-              alt="Congratulations"
-              className="congrats-img"
+              alt="Kloss"
+              className="calendar-description-img"
             />
             <p>
               The Advent Calendar is only active in December.

@@ -352,8 +352,7 @@ p {
 }
 
 /* ====== CONGRATULATIONS OVERLAY ====== */
-.congrats-overlay,
-.calendar-description {
+.congrats-overlay {
   background: rgba(225, 225, 225, 1);
   display: flex;
   flex-direction: column;
@@ -369,6 +368,7 @@ p {
   margin-bottom: 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 01);
 }
+
 .calendar-description-img,
 .congrats-img {
   max-width: 200px;
@@ -394,11 +394,25 @@ p {
   padding: 0 12px 16px;
 }
 
+.calendar-description-img {
+  left: calc(50% - 100px);
+}
+
 .calendar-description {
   margin-top: 68px;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   box-sizing: border-box;
-  margin-right: 30px;
+  width: calc(40% - 60px);
+  position: relative;
+  display: block;
+  background: rgba(225, 225, 225, 1);
+  border-radius: 40px;
+  margin-bottom: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 01);
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .calendar-description p {
@@ -431,6 +445,11 @@ p {
     max-width: 100vw;
     padding: 0;
     margin: 0;
+  }
+
+  .calendar-description {
+    width: calc(100% - 60px);
+    box-sizing: border-box;
   }
 
   .challenge-text {

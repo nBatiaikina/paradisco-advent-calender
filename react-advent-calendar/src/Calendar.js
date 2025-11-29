@@ -4,19 +4,20 @@ import "./App.css";
 const dayBackgrounds = {
   20: `${process.env.PUBLIC_URL}/images/day2.png`,
   4: `${process.env.PUBLIC_URL}/images/day3.png`,
-  9: `${process.env.PUBLIC_URL}/images/day4.png`,
+  6: `${process.env.PUBLIC_URL}/images/day4.png`,
   23: `${process.env.PUBLIC_URL}/images/day5.png`,
   12: `${process.env.PUBLIC_URL}/images/day6.png`,
   1: `${process.env.PUBLIC_URL}/images/day7.png`,
-  14: `${process.env.PUBLIC_URL}/images/day10.png`,
+  16: `${process.env.PUBLIC_URL}/images/day10.png`,
   24: `${process.env.PUBLIC_URL}/images/day11.png`,
-  16: `${process.env.PUBLIC_URL}/images/day9.png`,
+  21: `${process.env.PUBLIC_URL}/images/day9.png`,
 };
 
 const dayBackgroundPositions = {
   20: "center top",
-  9: "left bottom",
+  6: "left bottom",
   12: "center top",
+  16: "center top",
   24: "left bottom",
 };
 
