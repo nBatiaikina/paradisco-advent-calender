@@ -12,16 +12,6 @@ function App() {
   const initialDay = Math.max(1, Math.min(24, 12)); // or today.getDate() for real date
   const [selectedDay, setSelectedDay] = useState(initialDay);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const num = parseInt(number, 10);
-    if (!name || isNaN(num) || num < 0) return;
-    const entry = { name, number: num, day: selectedDay };
-    push(ref(db, "entries"), entry);
-    setName("");
-    setNumber("");
-  };
-
   useEffect(() => {
     const entriesRef = ref(db, "entries");
     const unsubscribe = onValue(entriesRef, (snapshot) => {
@@ -71,7 +61,7 @@ function App() {
 
   return (
     <div className="advent-root">
-      <div class="header">
+      <div className="header">
         <h1>Paradisco Advent Calendar</h1>
         <p>Welcome! Open a new surprise every day in December.</p>
       </div>
@@ -86,9 +76,13 @@ function App() {
           setName={setName}
           number={number}
           setNumber={setNumber}
-          onSubmit={handleSubmit}
-          entries={entries.filter((e) => e.day === selectedDay)} // Filter for the selected day
-          target={challenges[selectedDay - 1]?.amount} // Pass the daily target
+          entries={entries.filter((e) => e.day === selectedDay)}
+          target={challenges[selectedDay - 1]?.amount}
+          onEntrySubmit={({ name, number }) => {
+            const entry = { name, number, day: selectedDay };
+            push(ref(db, "entries"), entry);
+          }}
+          selectedDay={selectedDay}
         />
       </div>
     </div>
