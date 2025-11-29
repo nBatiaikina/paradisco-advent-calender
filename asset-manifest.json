@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/paradisco-advent-calender/static/css/main.12efe102.css",
+    "main.css": "/paradisco-advent-calender/static/css/main.314b44b0.css",
     "main.js": "/paradisco-advent-calender/static/js/main.ff5d1292.js",
     "static/js/453.8635a792.chunk.js": "/paradisco-advent-calender/static/js/453.8635a792.chunk.js",
     "static/media/SFCollegiateSolid.ttf": "/paradisco-advent-calender/static/media/SFCollegiateSolid.6f5bd3f2ff36550c0d09.ttf",
     "static/media/SFCollegiateSolid-Bold.ttf": "/paradisco-advent-calender/static/media/SFCollegiateSolid-Bold.213d7b13a25e2f004579.ttf",
     "index.html": "/paradisco-advent-calender/index.html",
-    "main.12efe102.css.map": "/paradisco-advent-calender/static/css/main.12efe102.css.map",
+    "main.314b44b0.css.map": "/paradisco-advent-calender/static/css/main.314b44b0.css.map",
     "main.ff5d1292.js.map": "/paradisco-advent-calender/static/js/main.ff5d1292.js.map",
     "453.8635a792.chunk.js.map": "/paradisco-advent-calender/static/js/453.8635a792.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12efe102.css",
+    "static/css/main.314b44b0.css",
     "static/js/main.ff5d1292.js"
   ]
 }
