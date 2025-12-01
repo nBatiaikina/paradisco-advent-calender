@@ -34,7 +34,7 @@ function App() {
 
   const challenges = [
     { label: "minutes of Plank", amount: 101 },
-    { label: "minutes of Running ", amount: 512 },
+    { label: "minutes of Running ", amount: 342 },
     { label: "Push-Ups", amount: 1503 },
     { label: "hours of Yoga / Stretching", amount: 444 },
     { label: "Squats", amount: 2525 },
