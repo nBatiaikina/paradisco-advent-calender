@@ -96,7 +96,7 @@ const dayColorsVibrant = {
   19: "rgba(255, 193, 7, 1)", // vibrant yellow
   20: "rgba(244, 67, 54, 1)", // vibrant red
   21: "rgba(65, 105, 225, 1)", // royal blue
-  22: "rgba(255, 235, 59, 1)", // vibrant yellow
+  22: "rgba(255, 177, 22, 1)", // vibrant yellow
   23: "rgba(30, 144, 255, 1)", // dodger blue
   24: "rgba(244, 67, 54, 1)", // vibrant red
 };
@@ -119,7 +119,9 @@ export default function Calendar({
   }, [selectedDay]);
 
   const today = new Date();
-  const currentDay = 12;
+  const isDecember = today.getMonth() === 11;
+  const currentDay = isDecember ? today.getDate() : 0; // Only allow days up to today in December, else lock all
+  //const currentDay = 0;
   //const currentDay = today.getMonth() === 11 ? today.getDate() : 24; // Only allow in December, else unlock all
 
   return (

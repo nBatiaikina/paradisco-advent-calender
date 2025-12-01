@@ -17,12 +17,15 @@ export default function TeamInputResults({
   const progress = Math.min(total / target, 1);
   const fulfilled = total >= target;
 
+  //const currentDay = today.getDate();
+
   const today = new Date();
-  const currentDay = 12; //today.getDate();
+  const isDecember = today.getMonth() === 11;
+  const currentDay = isDecember ? today.getDate() : 0;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const num = parseInt(number, 10);
+    const num = parseInt(number, 12);
     const maxAllowed = Math.floor(target * 0.2);
     if (!name || isNaN(num) || num < 1 || num > maxAllowed) {
       setError("I don't believe you've done that much :)");

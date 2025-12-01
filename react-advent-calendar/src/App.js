@@ -4,12 +4,15 @@ import { db } from "./firebase";
 import { ref, push, onValue } from "firebase/database";
 import Calendar from "./Calendar";
 import TeamInputResults from "./TeamInputResults";
+const superKloss = `${process.env.PUBLIC_URL}/images/Superkloss.svg`;
 
 function App() {
   const [entries, setEntries] = useState([]);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const initialDay = Math.max(1, Math.min(24, 12)); // or today.getDate() for real date
+  const today = new Date();
+  const isDecember = today.getMonth() === 11;
+  const initialDay = isDecember ? today.getDate() : 0;
   const [selectedDay, setSelectedDay] = useState(initialDay);
 
   useEffect(() => {
@@ -63,7 +66,7 @@ function App() {
     <div className="advent-root">
       <div className="header">
         <h1>Paradisco Advent Calendar</h1>
-        <p>Welcome! Open a new surprise every day in December.</p>
+        <p>Magical place where you can find a new challenge every day!</p>
       </div>
       <div className="side-by-side">
         <Calendar
@@ -71,19 +74,34 @@ function App() {
           onSelectDay={setSelectedDay}
           challenges={challenges}
         />
-        <TeamInputResults
-          name={name}
-          setName={setName}
-          number={number}
-          setNumber={setNumber}
-          entries={entries.filter((e) => e.day === selectedDay)}
-          target={challenges[selectedDay - 1]?.amount}
-          onEntrySubmit={({ name, number }) => {
-            const entry = { name, number, day: selectedDay };
-            push(ref(db, "entries"), entry);
-          }}
-          selectedDay={selectedDay}
-        />
+        {isDecember ? (
+          <TeamInputResults
+            name={name}
+            setName={setName}
+            number={number}
+            setNumber={setNumber}
+            entries={entries.filter((e) => e.day === selectedDay)}
+            target={challenges[selectedDay - 1]?.amount}
+            onEntrySubmit={({ name, number }) => {
+              const entry = { name, number, day: selectedDay };
+              push(ref(db, "entries"), entry);
+            }}
+            selectedDay={selectedDay}
+          />
+        ) : (
+          <div className="calendar-description">
+            <img
+              src={superKloss}
+              alt="Congratulations"
+              className="congrats-img"
+            />
+            <p>
+              The Advent Calendar is only active in December.
+              <br />
+              Come back then to join the daily challenges and log your results!
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

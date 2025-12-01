@@ -352,7 +352,8 @@ p {
 }
 
 /* ====== CONGRATULATIONS OVERLAY ====== */
-.congrats-overlay {
+.congrats-overlay,
+.calendar-description {
   background: rgba(225, 225, 225, 1);
   display: flex;
   flex-direction: column;
@@ -368,12 +369,14 @@ p {
   margin-bottom: 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 01);
 }
+.calendar-description-img,
 .congrats-img {
   max-width: 200px;
   margin-bottom: 1rem;
   position: absolute;
   top: -55px;
 }
+
 .congrats-text {
   font-size: 50px;
   color: #f7813b;
@@ -391,6 +394,21 @@ p {
   padding: 0 12px 16px;
 }
 
+.calendar-description {
+  margin-top: 68px;
+  height: auto;
+  box-sizing: border-box;
+  margin-right: 30px;
+}
+
+.calendar-description p {
+  color: #007dc3;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 60px 16px 20px;
+  height: auto;
+}
 @media only screen and (max-width: 1100px) {
   .calendar {
     grid-template-columns: repeat(5, minmax(80px, 1fr));
@@ -423,6 +441,7 @@ p {
 @media only screen and (max-width: 640px) {
   .calendar {
     grid-template-columns: repeat(4, minmax(50px, 1fr));
+    margin-bottom: 24px;
   }
 
   h1 {
