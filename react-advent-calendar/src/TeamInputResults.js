@@ -24,7 +24,7 @@ export default function TeamInputResults({
   const handleSubmit = (e) => {
     e.preventDefault();
     const num = parseInt(number, 12);
-    const maxAllowed = Math.floor(target * 0.2);
+    const maxAllowed = Math.floor(target * 0.3);
     if (!name || isNaN(num) || num < 1 || num > maxAllowed) {
       setError("I don't believe you've done that much :)");
       return;
