@@ -33,36 +33,35 @@ function App() {
   }, []);
 
   const challenges = [
-    { label: "minutes of Plank", amount: 101 },
-    { label: "minutes of Running ", amount: 342 },
-    { label: "Push-Ups", amount: 1503 },
-    { label: "minutes of Yoga / Stretching", amount: 444 },
-    { label: "Squats", amount: 2525 },
+    { label: "minutes of Plank", amount: 101 }, // done 154 
+    { label: "minutes of Running ", amount: 342 }, //done 460
+    { label: "Push-Ups", amount: 1503 }, //done 1947
+    { label: "minutes of Yoga / Stretching", amount: 444 }, //failed 302
+    { label: "Squats", amount: 2525 }, //done 2619
     {
       label: "minutes of Cardio",
-      amount: 946,
+      amount: 946, //failed 783
     },
     { label: "minutes of Stretching", amount: 357 },
-    { label: "Lunges", amount: 200 },
-    { label: "Yoga/stretching (hours)", amount: 4 },
-    { label: "Push-ups", amount: 600 },
-    { label: "Sit-ups", amount: 700 },
-    { label: "hours of Running", amount: 20 },
-    { label: "Plank (min)", amount: 30 },
-    { label: "Jumping-jacks", amount: 1000 },
-    { label: "Burpies", amount: 300 },
-    { label: "Squats", amount: 500 },
-    { label: "Lunges", amount: 200 },
-    { label: "hours of Yoga/stretching", amount: 4 },
-    { label: "Push-ups", amount: 600 },
-    { label: "Sit-ups", amount: 700 },
-    { label: "Run", amount: 20 },
-    { label: "Plank (min)", amount: 30 },
-    { label: "Jumping-jacks", amount: 1000 },
-    { label: "Burpies", amount: 300 },
-    { label: "Squats", amount: 500 },
-    { label: "Lunges", amount: 200 },
-    { label: "Yoga/stretching (hours)", amount: 4 },
+    { label: "Lunges", amount: 2008 }, //monday 8.12
+    { label: "Burpies", amount: 849 }, //tuesday 9.12
+    { label: "Crunches", amount: 910 }, //wednesday 10.12
+    { label: "minutes of Yoga / Stretching", amount: 411 }, //thursday 11.12
+    { label: "minutes of Wall Sits", amount: 112 }, //friday 12.12
+    { label: "minutes of Throwing Frisbee", amount:413 }, //saturday 13.12
+    { label: "minutes of Plank", amount: 155 }, //sunday 14.12
+    { label: "minutes of Stretching / Mobility", amount: 357 }, //monday 15.12
+    { label: "climbed up stairs", amount: 1316 }, //tuesday 16.12
+    { label: "Push-ups", amount: 2000 }, //wednesday 17.12
+     // Write something like "Enjoy the party" instead of the Kloß
+    { label: "anstoßen mit Getränk", amount: 1 }, //thursday 18.12
+    { label: "minutes of Stretching / Yoga", amount: 419 }, //friday 19.12
+    { label: "minutes of Cardio", amount: 820 }, //saturday 20.12
+    // Add the christmass tree instead of the Kloß
+    { label: "Weihnachtsbaum loben", amount: 21 }, // sunday 21.12
+    { label: "minutes of Plank", amount: 202 }, // monday 22.12
+    { label: "minutes of Cardio", amount: 1000 }, //tuesday 23.12
+    { label: "Push-ups", amount: 2025 }, //wednesday 24.12
   ];
 
   return (
