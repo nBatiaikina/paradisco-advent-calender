@@ -44,7 +44,7 @@ function App() {
     },
     { label: "minutes of Stretching", amount: 357 },
     { label: "Lunges", amount: 2008 }, //monday 8.12
-    { label: "Burpies", amount: 849 }, //tuesday 9.12
+    { label: "Burpies", amount: 409 }, //tuesday 9.12
     { label: "Crunches", amount: 910 }, //wednesday 10.12
     { label: "minutes of Yoga / Stretching", amount: 411 }, //thursday 11.12
     { label: "minutes of Wall Sits", amount: 112 }, //friday 12.12
