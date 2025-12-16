@@ -49,57 +49,57 @@ const daySizeClasses = {
 };
 
 const dayColors = {
-  1: "rgba(255, 151, 161, 0.85)", // pastel red
-  2: "rgba(255, 206, 99, 0.81)", // pastel yellow-orange
-  3: "rgba(202, 225, 255, 0.5)", // very light blue
-  4: "rgba(255, 236, 179, 0.6)", // pastel cream
-  5: "rgba(191, 239, 255, 0.8)", // pastel blue
-  6: "rgba(255, 224, 178, 0.5)", // pastel yellow-orange
-  7: "rgba(163, 228, 255, 0.7)", // pastel blue
-  8: "rgba(255, 239, 186, 0.5)", // pastel light yellow
-  9: "rgba(135, 206, 250, 0.6)", // pastel blue
-  10: "rgba(255, 176, 158, 0.8)", // pastel red
-  11: "rgba(176, 224, 230, 0.7)", // powder blue
-  12: "rgba(255, 236, 179, 0.8)", // pastel cream
-  13: "hsla(39, 100%, 75%, 0.78)", // pastel yellow-orange
-  14: "rgba(100, 149, 237, 0.5)", // cornflower blue
-  15: "rgba(255, 205, 210, 0.6)", // pastel red
-  16: "rgba(202, 225, 255, 0.5)", // very light blue
-  17: "rgba(191, 239, 255, 0.7)", // pastel blue
-  18: "rgba(163, 228, 255, 0.5)", // pastel blue
-  19: "rgba(255, 224, 178, 0.8)", // pastel yellow-orange
-  20: "rgba(255, 205, 210, 0.6)", // pastel red
-  21: "rgba(135, 206, 250, 0.7)", // pastel blue
-  22: "rgba(255, 239, 186, 0.6)", // pastel light yellow
-  23: "rgba(176, 224, 230, 0.5)", // powder blue
-  24: "rgba(255, 205, 210, 0.8)", // pastel red
+  1: "rgba(255, 151, 161, 0.85)",
+  2: "rgba(255, 206, 99, 0.81)",
+  3: "rgba(202, 225, 255, 0.5)",
+  4: "rgba(255, 236, 179, 0.6)",
+  5: "rgba(191, 239, 255, 0.8)",
+  6: "rgba(255, 224, 178, 0.5)",
+  7: "rgba(163, 228, 255, 0.7)",
+  8: "rgba(255, 239, 186, 0.5)",
+  9: "rgba(135, 206, 250, 0.6)",
+  10: "rgba(255, 176, 158, 0.8)",
+  11: "rgba(176, 224, 230, 0.7)",
+  12: "rgba(255, 236, 179, 0.8)",
+  13: "hsla(39, 100%, 75%, 0.78)",
+  14: "rgba(100, 149, 237, 0.5)",
+  15: "rgba(255, 205, 210, 0.6)",
+  16: "rgba(202, 225, 255, 0.5)",
+  17: "rgba(191, 239, 255, 0.7)",
+  18: "rgba(163, 228, 255, 0.5)",
+  19: "rgba(255, 224, 178, 0.8)",
+  20: "rgba(255, 205, 210, 0.6)",
+  21: "rgba(135, 206, 250, 0.7)",
+  22: "rgba(255, 239, 186, 0.6)",
+  23: "rgba(176, 224, 230, 0.5)",
+  24: "rgba(255, 205, 210, 0.8)",
 };
 
 const dayColorsVibrant = {
-  1: "rgba(244, 67, 54, 1)", // vibrant red
-  2: "rgba(255, 193, 7, 1)", // vibrant yellow
-  3: "rgba(30, 144, 255, 1)", // dodger blue
-  4: "rgba(255, 191, 64, 1)", // vibrant cream
-  5: "rgba(0, 160, 213, 1)", // vibrant blue
-  6: "rgba(255, 193, 7, 1)", // vibrant yellow
-  7: "rgba(70, 130, 180, 1)", // steel blue
-  8: "rgba(255, 199, 59, 1)", // vibrant yellow
-  9: "rgba(65, 105, 225, 1)", // royal blue
-  10: "rgba(244, 67, 54, 1)", // vibrant red
-  11: "rgba(30, 144, 255, 1)", // dodger blue
-  12: "rgba(245, 163, 0, 1)", // vibrant cream
-  13: "rgba(255, 193, 7, 1)", // vibrant yellow
-  14: "rgba(0, 191, 255, 1)", // deep sky blue
-  15: "rgba(244, 67, 54, 1)", // vibrant red
-  16: "rgba(0, 160, 213, 1)", // vibrant blue
-  17: "rgba(30, 144, 255, 1)", // dodger blue
-  18: "rgba(70, 130, 180, 1)", // steel blue
-  19: "rgba(255, 193, 7, 1)", // vibrant yellow
-  20: "rgba(244, 67, 54, 1)", // vibrant red
-  21: "rgba(65, 105, 225, 1)", // royal blue
-  22: "rgba(255, 177, 22, 1)", // vibrant yellow
-  23: "rgba(30, 144, 255, 1)", // dodger blue
-  24: "rgba(244, 67, 54, 1)", // vibrant red
+  1: "rgba(244, 67, 54, 1)",
+  2: "rgba(221, 164, 79, 1)",
+  3: "rgba(30, 144, 255, 1)",
+  4: "rgba(255, 0, 89, 0.68)",
+  5: "rgba(0, 160, 213, 1)",
+  6: "rgba(255, 193, 7, 1)",
+  7: "rgba(70, 130, 180, 1)",
+  8: "rgba(255, 199, 59, 1)",
+  9: "rgba(65, 105, 225, 1)",
+  10: "rgba(244, 67, 54, 1)",
+  11: "rgba(30, 144, 255, 1)",
+  12: "rgba(245, 163, 0, 1)",
+  13: "rgba(255, 193, 7, 1)",
+  14: "rgba(0, 191, 255, 1)",
+  15: "rgba(244, 67, 54, 1)",
+  16: "rgba(0, 160, 213, 1)",
+  17: "rgba(30, 144, 255, 1)",
+  18: "rgba(70, 130, 180, 1)",
+  19: "rgba(255, 193, 7, 1)",
+  20: "rgba(244, 67, 54, 1)",
+  21: "rgba(65, 105, 225, 1)",
+  22: "rgba(255, 177, 22, 1)",
+  23: "rgba(30, 144, 255, 1)",
+  24: "rgba(244, 67, 54, 1)",
 };
 
 export default function Calendar({
@@ -121,9 +121,7 @@ export default function Calendar({
 
   const today = new Date();
   const isDecember = today.getMonth() === 11;
-  const currentDay = isDecember ? today.getDate() : 0; // Only allow days up to today in December, else lock all
-  //const currentDay = 0;
-  //const currentDay = today.getMonth() === 11 ? today.getDate() : 24; // Only allow in December, else unlock all
+  const currentDay = isDecember ? today.getDate() : 0;
 
   return (
     <div className="calendar">

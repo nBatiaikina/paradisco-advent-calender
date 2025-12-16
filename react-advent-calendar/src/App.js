@@ -33,13 +33,16 @@ function App() {
   }, []);
 
   const challenges = [
-    { label: "Push-ups", amount: 600 },
-    { label: "Sit-ups", amount: 700 },
-    { label: "hours of Running", amount: 20 }, // 20km run
-    { label: "mins Plank", amount: 30 },
-    { label: "Jumping-jacks", amount: 1000 },
-    { label: "Burpies", amount: 300 },
-    { label: "Squats", amount: 500 },
+    { label: "minutes of Plank", amount: 101 },
+    { label: "minutes of Running ", amount: 512 },
+    { label: "Push-Ups", amount: 1503 },
+    { label: "hours of Yoga / Stretching", amount: 444 },
+    { label: "Squats", amount: 2525 },
+    {
+      label: "minutes of Cardio",
+      amount: 946,
+    },
+    { label: "minutes of Stretching", amount: 357 },
     { label: "Lunges", amount: 200 },
     { label: "Yoga/stretching (hours)", amount: 4 },
     { label: "Push-ups", amount: 600 },

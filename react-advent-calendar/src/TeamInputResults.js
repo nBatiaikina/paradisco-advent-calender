@@ -17,8 +17,6 @@ export default function TeamInputResults({
   const progress = Math.min(total / target, 1);
   const fulfilled = total >= target;
 
-  //const currentDay = today.getDate();
-
   const today = new Date();
   const isDecember = today.getMonth() === 11;
   const currentDay = isDecember ? today.getDate() : 0;
@@ -120,24 +118,26 @@ export default function TeamInputResults({
           </div>
         )}
       </div>
-      <div className="results-block">
-        <table className="results-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            {entries.map((entry, idx) => (
-              <tr key={idx}>
-                <td>{entry.name}</td>
-                <td>{entry.number}</td>
+      {entries.length > 0 && (
+        <div className="results-block">
+          <table className="results-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Number</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+            </thead>
+            <tbody>
+              {entries.map((entry, idx) => (
+                <tr key={idx}>
+                  <td>{entry.name}</td>
+                  <td>{entry.number}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
