@@ -154,9 +154,10 @@ p {
   font-size: 62px;
 }
 .challenge-text {
-  font-size: 24px;
+  font-size: 22px;
+  line-height: 30px;
   font-family: "Montserrat", Arial, sans-serif;
-  padding: 0 10px;
+  padding: 0 12px;
   z-index: 2;
   position: absolute;
   height: 100%;
@@ -475,5 +476,11 @@ p {
   p {
     font-size: 16px;
     padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .challenge-text {
+    font-size: 20px;
   }
 }
