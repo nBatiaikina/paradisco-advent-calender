@@ -26,11 +26,11 @@ export default function TeamInputResults({
     e.preventDefault();
     const num = parseInt(number, 10);
     //const maxAllowed = Math.floor(target * 0.3); //remove after 18th!!!
-    const maxAllowed = Math.floor(target * 1);
-    if (!name || isNaN(num) || num < 1 || num > maxAllowed) {
-      setError("I don't believe you've done that much :)");
-      return;
-    }
+    //const maxAllowed = Math.floor(target * 1);
+    // if (!name || isNaN(num) || num < 1 || num > maxAllowed) {
+    //   setError("I don't believe you've done that much :)");
+    //   return;
+    // }
     setError("");
     if (onEntrySubmit) {
       onEntrySubmit({ name, number: num });
