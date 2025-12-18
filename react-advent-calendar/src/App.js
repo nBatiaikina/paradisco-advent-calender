@@ -55,13 +55,13 @@ function App() {
     { label: "Push-ups", amount: 2000 }, //wednesday 17.12
     // Write something like "Enjoy the party" instead of the Kloß
     { label: "anstoßen mit Getränk", amount: 1 }, //thursday 18.12
-    { label: "minutes of Stretching / Yoga", amount: 419 }, //friday 19.12
+    { label: "minutes of Stretching / Yoga", amount: 249 }, //friday 19.12
     { label: "minutes of Cardio", amount: 820 }, //saturday 20.12
     // Add the christmass tree instead of the Kloß
-    { label: "Weihnachtsbaum loben", amount: 21 }, // sunday 21.12
-    { label: "minutes of Plank", amount: 202 }, // monday 22.12
-    { label: "minutes of Cardio", amount: 1000 }, //tuesday 23.12
-    { label: "Push-ups", amount: 2025 }, //wednesday 24.12
+    { label: "Push-ups", amount: 2025 }, // sunday 21.12
+    { label: "minutes of Cardio", amount: 1000 }, // monday 22.12
+    { label: "minutes of Plank", amount: 202 }, //tuesday 23.12
+    { label: "Squats", amount: 2025 }, //wednesday 24.12
   ];
 
   return (
