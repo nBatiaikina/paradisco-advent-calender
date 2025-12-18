@@ -378,6 +378,28 @@ p {
   top: -55px;
 }
 
+.party-overlay {
+  margin-top: 50px;
+  padding: 10px;
+}
+.party-overlay .congrats-img {
+  width: 130px;
+  top: -70px;
+  left: calc(50% - 65px);
+}
+
+.party-overlay .congrats-text {
+  line-height: 45px;
+  padding-top: 70px;
+  color: #f96464;
+}
+
+.party-overlay .congrats-text-small {
+  font-size: 16px;
+  padding-top: 12px;
+  color: #2799fd;
+}
+
 .congrats-text {
   font-size: 50px;
   color: #f7813b;

@@ -13,6 +13,7 @@ export default function TeamInputResults({
 }) {
   const [error, setError] = useState("");
   const superKloss = `${process.env.PUBLIC_URL}/images/Superkloss.svg`;
+  const tree = `${process.env.PUBLIC_URL}/images/christmas-tree.png`;
   const total = entries.reduce((sum, entry) => sum + Number(entry.number), 0);
   const progress = Math.min(total / target, 1);
   const fulfilled = total >= target;
@@ -41,7 +42,7 @@ export default function TeamInputResults({
     <div className="team-input-results">
       <div className="input-and-bar-block">
         <div className="progress-block">
-          {fulfilled && (
+          {fulfilled && selectedDay !== 18 && (
             <div className="congrats-overlay">
               <img
                 src={superKloss}
@@ -49,7 +50,7 @@ export default function TeamInputResults({
                 className="congrats-img"
               />
               <div className="congrats-text">Doooooone!</div>
-              <div class="congrats-text-small">
+              <div className="congrats-text-small">
                 Great job! <br /> The challenge for this day has been completed!{" "}
               </div>
               {selectedDay === currentDay && (
@@ -60,6 +61,17 @@ export default function TeamInputResults({
               )}
             </div>
           )}
+
+          {fulfilled && selectedDay === 18 && (
+            <div className="congrats-overlay party-overlay">
+              <img src={tree} alt="Congratulations" className="congrats-img" />
+              <div className="congrats-text">Enjoy the party!</div>
+              <div className="congrats-text-small">
+                Dance like nobody's watching.
+              </div>
+            </div>
+          )}
+
           <div className="progress-count">
             <span className={fulfilled ? "progress-total-fulfilled" : ""}>
               {total}

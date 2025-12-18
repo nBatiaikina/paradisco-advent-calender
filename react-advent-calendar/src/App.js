@@ -33,7 +33,7 @@ function App() {
   }, []);
 
   const challenges = [
-    { label: "minutes of Plank", amount: 101 }, // done 154 
+    { label: "minutes of Plank", amount: 101 }, // done 154
     { label: "minutes of Running ", amount: 342 }, //done 460
     { label: "Push-Ups", amount: 1503 }, //done 1947
     { label: "minutes of Yoga / Stretching", amount: 444 }, //failed 302
@@ -48,12 +48,12 @@ function App() {
     { label: "Crunches", amount: 910 }, //wednesday 10.12
     { label: "minutes of Yoga / Stretching", amount: 411 }, //thursday 11.12
     { label: "minutes of Wall Sits", amount: 112 }, //friday 12.12
-    { label: "minutes of Throwing Frisbee", amount:413 }, //saturday 13.12
+    { label: "minutes of Throwing Frisbee", amount: 413 }, //saturday 13.12
     { label: "minutes of Plank", amount: 155 }, //sunday 14.12
     { label: "minutes of Stretching / Mobility", amount: 357 }, //monday 15.12
     { label: "climbed up stairs", amount: 1316 }, //tuesday 16.12
     { label: "Push-ups", amount: 2000 }, //wednesday 17.12
-     // Write something like "Enjoy the party" instead of the Kloß
+    // Write something like "Enjoy the party" instead of the Kloß
     { label: "anstoßen mit Getränk", amount: 1 }, //thursday 18.12
     { label: "minutes of Stretching / Yoga", amount: 419 }, //friday 19.12
     { label: "minutes of Cardio", amount: 820 }, //saturday 20.12
