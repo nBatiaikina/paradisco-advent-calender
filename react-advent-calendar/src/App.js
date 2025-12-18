@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import { db } from "./firebase";
-import { ref, push, onValue } from "firebase/database";
+import {
+  ref,
+  push,
+  onValue,
+  query,
+  orderByChild,
+  equalTo,
+} from "firebase/database";
 import Calendar from "./Calendar";
 import TeamInputResults from "./TeamInputResults";
 const superKloss = `${process.env.PUBLIC_URL}/images/Superkloss.svg`;
@@ -16,8 +23,16 @@ function App() {
   const [selectedDay, setSelectedDay] = useState(initialDay);
 
   useEffect(() => {
+    if (!selectedDay) return;
+
     const entriesRef = ref(db, "entries");
-    const unsubscribe = onValue(entriesRef, (snapshot) => {
+    const dayQuery = query(
+      entriesRef,
+      orderByChild("day"),
+      equalTo(selectedDay)
+    );
+
+    const unsubscribe = onValue(dayQuery, (snapshot) => {
       const data = snapshot.val();
       if (data) {
         const loaded = Object.values(data).map((entry) => ({
@@ -29,8 +44,26 @@ function App() {
         setEntries([]);
       }
     });
+
     return () => unsubscribe();
-  }, []);
+  }, [selectedDay]);
+
+  // useEffect(() => {
+  //   const entriesRef = ref(db, "entries");
+  //   const unsubscribe = onValue(entriesRef, (snapshot) => {
+  //     const data = snapshot.val();
+  //     if (data) {
+  //       const loaded = Object.values(data).map((entry) => ({
+  //         ...entry,
+  //         number: Number(entry.number),
+  //       }));
+  //       setEntries(loaded);
+  //     } else {
+  //       setEntries([]);
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
 
   const challenges = [
     { label: "minutes of Plank", amount: 101 }, // done 154
