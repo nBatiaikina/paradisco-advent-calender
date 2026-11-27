@@ -11,6 +11,7 @@ import {
 } from "firebase/database";
 import Calendar from "./Calendar";
 import TeamInputResults from "./TeamInputResults";
+import SummaryTable from "./SummaryTable";
 const superKloss = `${process.env.PUBLIC_URL}/images/Superkloss.svg`;
 
 function App() {
@@ -137,6 +138,9 @@ function App() {
             </p>
           </div>
         )}
+      </div>
+      <div className="results-block summary-table">
+        <SummaryTable challenges={challenges} />
       </div>
     </div>
   );

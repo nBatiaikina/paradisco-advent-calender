@@ -283,6 +283,8 @@ p {
   overflow: visible;
   box-sizing: border-box;
   position: relative;
+  width: 70%;
+  margin:30px
 }
 
 .progress-total-fulfilled {
@@ -321,6 +323,14 @@ p {
 }
 .results-table td {
   background: rgba(255, 255, 255, 0.05);
+}
+.results-table td.status-done {
+  color: #3ecf6a;
+  font-weight: bold;
+}
+.results-table td.status-failed {
+  color: #ff5c5c;
+  font-weight: bold;
 }
 .results-total-row td {
   background: #ffb522;
